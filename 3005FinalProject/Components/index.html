@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Health and Fitness Club Management System</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Menu bar -->
+    <header>
+      <div class="container">
+        <h1>Health and Fitness Club Management System</h1>
+        <!-- Signup button -->
+        <button id="signup-button">Signup</button>
+        <button id="signUpTrainer-button">SignUp as Trainer</button>
+        <button id="signUpAdmin-button">SignUp as an Admin</button>
+        <button id="login-button">LogIn</button>
+        <button id="loginTrainer-button">Log In as Trainer</button>
+        <button id="logout-button" class="hidden">Logout</button>
+      </div>
+    </header>
+
+    <!-- Signup form -->
+    <div class="container" id="signup-container" style="display: none">
+      <form id="signup-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required /><br />
+
+        <button type="submit" id="submit-signup">Submit</button>
+      </form>
+    </div>
+
+
+    <!-- Trainers form (initially hidden) -->
+    <div class="container   " id="trainer-container" style="display: none">
+      <form id="trainer-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required /><br />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required /><br />
+
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required /><br />
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required /><br />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option></select
+        ><br />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" /><br />
+
+        <label for="available-days">Available Days:</label>
+        <input type="text" id="available-days" name="available_days" /><br />
+
+        <label for="start-time">Start Time:</label>
+        <input type="time" id="start-time" name="start_time" /><br />
+
+        <label for="end-time">End Time:</label>
+        <input type="time" id="end-time" name="end_time" /><br />
+
+        <label for="trainer-email">Email:</label>
+        <input type="email" id="trainer-email" name="email" required /><br />
+
+        <button type="submit" id="submit-signupTrainerInfo">
+          Submit Trainer Information
+        </button>
+      </form>
+      <div id="trainers-message"></div>
+    </div>
+
+    <!-- Members form (initially hidden) -->
+    <div class="container" id="members-container" style="display: none">
+      <form id="members-form">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required /><br />
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required /><br />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" /><br />
+
+        <label for="phonenumber">Phone Number:</label>
+        <input type="tel" id="phonenumber" name="phonenumber" /><br />
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"></textarea><br />
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option></select
+        ><br />
+
+        <label for="fitnessgoal">Fitness Goal:</label>
+        <textarea id="fitnessgoal" name="fitnessgoal"></textarea><br />
+
+        <label for="height">Height (in cm):</label>
+        <input type="number" id="height" name="height" /><br />
+
+        <label for="weight">Weight (in Pounds):</label>
+        <input type="number" id="weight" name="weight" /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+
+        <button type="submit" id="submit-members">
+          Submit Member Information
+        </button>
+      </form>
+      <div id="members-message"></div>
+    </div>
+
+     <!-- Admin form -->
+    <div class="container" id="signUpAdmin-container" style="display: none">
+        <form id="signupAdmin-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required /><br />
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br />
+  
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required /><br />
+  
+          <button type="submit" id="submit-signupAdmin">Submit</button>
+        </form>
+      </div>
+
+    <form id="login-form">
+        <h2>Member Login</h2>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required /><br />
+      <button type="submit">Login</button>
+    </form>
+    <div id="login-message"></div>
+
+    <form id="loginTrainer-form">
+        <h2>Trainer Log In</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required /><br />
+        <button type="submit">Login</button>
+      </form>
+      <div id="login-message"></div>
+
+    <!-- Welcome message (initially hidden) -->
+    <div id="welcome-message" class="hidden">
+      <div class="welcome-content">
+        <h2>Welcome to the Health and Fitness Club Management System</h2>
+        <div id="member-info-container">
+          <h3>Member Information</h3>
+          <div id="member-info-table"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="welcomeTrainer-message" class="hidden">
+        <div class="welcomeTrainer-content">
+          <h2>Welcome to the Health and Fitness Club Management System</h2>
+          <div id="trainer-info-container">
+            <h3>Trainer Information</h3>
+            <div id="trainer-info-table"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="trainer-dashboard" >
+        <h2>Trainer Dashboard</h2>
+        <form id="member-search-form">
+            <label for="search-query">Search Member:</label>
+            <input type="text" id="search-query" name="search-query" placeholder="Enter member name" required />
+            <button type="submit">Search</button>
+        </form>
+        <div id="member-search-results"></div>
+    </div>
+
+    <div id="pt-schedule-container">
+    <button id="schedule-pt-button">Schedule PT Session</button>
+    <div id="pt-schedule-form" style="display: none;">
+        <h2>Schedule PT Session</h2>
+        <ul id="trainer-list"></ul>
+        <form id="pt-session-form">
+            <input type="hidden" id="selected-trainer-id" name="selected_trainer_id">
+            <label for="session-date">Session Date:</label>
+            <input type="date" id="session-date" name="session_date" required>
+            <label for="session-time">Session Time:</label>
+            <input type="time" id="session-time" name="session_time" required>
+            <button type="submit">Schedule Session</button>
+        </form>
+    </div>
+</div>
+
+<form id="booking-form">
+    <label for="room-select">Select Room:</label>
+    <select id="room-select" name="room_id">
+    </select>
+    <label for="booking-date">Booking Date:</label>
+    <input type="date" id="booking-date" name="booking_date" required>
+    <label for="start-time">Start Time:</label>
+    <input type="time" id="start-time" name="start_time" required>
+    <label for="end-time">End Time:</label>
+    <input type="time" id="end-time" name="end_time" required>
+    <input type="hidden" id="user-id" name="user_id" value="123"> 
+    <button type="submit">Book Room</button>
+  </form>
+  
+
+    <div id="signup-message"></div>
+    <div id="adminSignUp-message"></div>
+
+    <div id="message"></div>
+    <script src="Scripts/script.js"></script>
+  </body>
+</html>

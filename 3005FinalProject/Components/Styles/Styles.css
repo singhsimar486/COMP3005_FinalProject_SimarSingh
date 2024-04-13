@@ -1,0 +1,136 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Welcome message styles */
+#welcome-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.welcome-content {
+    text-align: center;
+}
+
+/* Member information table styles */
+#member-info-container {
+    margin-top: 20px;
+}
+
+#member-info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#member-info-table th,
+#member-info-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#member-info-table th {
+    background-color: #f2f2f2;
+}
+/* Member information table styles */
+#trainer-info-container {
+    margin-top: 20px;
+}
+
+#trainer-info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#trainer-info-table th,
+#trainer-info-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#trainer-info-table th {
+    background-color: #f2f2f2;
+}
+
+
+/* Signup and login form container styles */
+#signup-form-container,
+#login-form-container {
+    margin-top: 20px;
+}login-button
+
+/* Message styles */
+#signup-message,
+#login-message {
+    margin-top: 20px;
+    color: red;
+}
+
+/* Logout button styles */
+#logout-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
